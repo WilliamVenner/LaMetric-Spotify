@@ -27,7 +27,9 @@
 		
 		// This works absolutely fine on Apache and PHP 7.
 		
-		output("NO GETALLHEADERS"); return;
+		http_response_code("501 Not Implemented");
+		error_log("https://github.com/WilliamVenner/LaMetric-Spotify/issues/2#issuecomment-325140347");
+		return;
 		
 	}
 	$headers = getallheaders();
