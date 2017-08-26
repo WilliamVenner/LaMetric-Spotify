@@ -1,13 +1,13 @@
 <?php
 	
-	$frames = [
-		"frames" => [
-			[
+	$frames = array(
+		"frames" => array(
+			array(
 				"text" => "?",
 				"icon" => "i647"
-			],
-		]
-	];
+			),
+		)
+	);
 	
 	function output($text) {
 		
