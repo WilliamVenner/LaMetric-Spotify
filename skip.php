@@ -8,8 +8,8 @@
 	
 	$auth = $headers["Authorization"];
     
-    require("inc/api.php");
-    $Spotify = new Spotify($auth);
+    	require("inc/api.php");
+    	$Spotify = new Spotify($auth);
     
 	$Spotify -> API("me/player/next", true);
     
