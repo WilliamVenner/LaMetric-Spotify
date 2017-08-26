@@ -18,7 +18,18 @@
 		echo(json_encode($frames));
 		
 	}
-	
+
+	if (!function_exists("getallheaders")) {
+		
+		// getallheaders is required to get the Authorization header as it does not appear
+		// in $_SERVER or anywhere else. Therefore, try updating all of your software -
+		// web server, PHP, etc. and try again.
+		
+		// This works absolutely fine on Apache and PHP 7.
+		
+		output("NO GETALLHEADERS"); return;
+		
+	}
 	$headers = getallheaders();
 	
 	if (!isset($headers["Authorization"])) {
